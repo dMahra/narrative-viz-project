@@ -1,0 +1,301 @@
+:root {
+  color-scheme: light;
+  --surface-1:      #fcfcfb;
+  --page-plane:     #f9f9f7;
+  --text-primary:   #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted:     #898781;
+  --gridline:       #e1e0d9;
+  --axis-line:      #c3c2b7;
+  --border:         rgba(11, 11, 11, 0.10);
+  --accent:         #2a78d6;
+  --accent-ink:     #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --page-plane:     #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --axis-line:      #383835;
+    --border:         rgba(255, 255, 255, 0.10);
+    --accent:         #3987e5;
+    --accent-ink:     #ffffff;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-1:      #1a1a19;
+  --page-plane:     #0d0d0d;
+  --text-primary:   #ffffff;
+  --text-secondary: #c3c2b7;
+  --text-muted:     #898781;
+  --gridline:       #2c2c2a;
+  --axis-line:      #383835;
+  --border:         rgba(255, 255, 255, 0.10);
+  --accent:         #3987e5;
+  --accent-ink:     #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--page-plane);
+  color: var(--text-primary);
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.page-header h1 {
+  font-size: 1.7rem;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+  font-size: 0.95rem;
+}
+
+.viz-root {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.narration-panel {
+  min-height: 100px;
+  margin-bottom: 12px;
+}
+
+.scene-progress {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.narration-panel h2 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+}
+
+.narration-panel p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 640px;
+}
+
+.explore-controls {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--gridline);
+}
+
+.slider-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.year-slider {
+  width: 100%;
+  max-width: 360px;
+}
+
+.explore-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 8px !important;
+}
+
+.chart-panel {
+  position: relative;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+}
+
+.chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.axis text {
+  fill: var(--text-muted);
+  font-size: 11px;
+}
+
+.axis path,
+.axis line {
+  stroke: var(--axis-line);
+}
+
+.axis-label {
+  fill: var(--text-secondary);
+  font-size: 12px;
+}
+
+.year-label {
+  fill: var(--text-primary);
+  font-size: 28px;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+.bubble {
+  stroke: var(--surface-1);
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+.bubble-hovered {
+  stroke: var(--text-primary);
+  stroke-width: 1.5px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.legend-item-static {
+  cursor: default;
+}
+
+.legend-item:not(.legend-item-static):hover {
+  border-color: var(--border);
+}
+
+.legend-item-inactive {
+  opacity: 0.4;
+}
+
+.legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.scene-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  gap: 10px;
+}
+
+.nav-btn {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.nav-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.nav-btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  margin-left: auto;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: var(--text-primary);
+  color: var(--surface-1);
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  min-width: 160px;
+  transition: opacity 0.1s ease;
+  z-index: 10;
+}
+
+.tooltip-region {
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.page-footer {
+  margin-top: 16px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* d3-annotation callout styling — consistent template across guided scenes,
+   deliberately distinct from the .tooltip free-exploration style above */
+.narrative-annotation .annotation-note-bg {
+  fill: var(--surface-1);
+  stroke: var(--border);
+}
+
+.narrative-annotation .annotation-connector,
+.narrative-annotation .annotation-subject {
+  stroke: var(--text-primary);
+  fill: none;
+}
+
+.narrative-annotation .annotation-note-title {
+  fill: var(--text-primary);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.narrative-annotation .annotation-note-label {
+  fill: var(--text-secondary);
+  font-size: 11px;
+}

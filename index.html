@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Growth–Emissions Divide</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
+  <header class="page-header">
+    <h1>The Growth&ndash;Emissions Divide</h1>
+    <p class="subtitle">How income and carbon emissions per person have moved together&mdash;and apart&mdash;since 1990</p>
+  </header>
+
+  <main class="viz-root">
+    <div class="narration-panel">
+      <div class="scene-progress" id="progress">Scene 1 of 5</div>
+      <h2 id="scene-title">&nbsp;</h2>
+      <p id="narration">Loading data&hellip;</p>
+      <div class="explore-controls" id="explore-controls" style="display:none;">
+        <label class="slider-label" for="year-slider">
+          Year: <span id="year-readout">2022</span>
+        </label>
+        <input type="range" id="year-slider" class="year-slider">
+        <p class="explore-hint">Click a region in the legend to isolate it. Hover any bubble for exact values.</p>
+      </div>
+    </div>
+
+    <div class="chart-panel">
+      <div id="chart-container" class="chart-container"></div>
+      <div id="legend-container"></div>
+    </div>
+
+    <nav class="scene-nav">
+      <button id="prev-btn" type="button" class="nav-btn">&larr; Prev</button>
+      <button id="explore-btn" type="button" class="nav-btn nav-btn-primary" style="display:none;">Explore the data yourself &rarr;</button>
+      <button id="next-btn" type="button" class="nav-btn nav-btn-primary">Next &rarr;</button>
+    </nav>
+  </main>
+
+  <footer class="page-footer">
+    <p>Source: World Bank World Development Indicators (GDP per capita PPP, CO&#8322; emissions per capita, population).</p>
+  </footer>
+</div>
+
+<script src="lib/d3.v7.min.js"></script>
+<script src="lib/d3-annotation.min.js"></script>
+<script src="js/state.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/annotations.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
