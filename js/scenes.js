@@ -11,15 +11,15 @@ App.scenes = [
         countryCode: "USA",
         title: "High income, high emissions",
         label: "The United States and its high-income peers sit far to the right (rich) and high on the chart (high CO₂ per person).",
-        dx: 70,
-        dy: -60
+        dx: -45,
+        dy: 45
       },
       {
         countryCode: "IND",
         title: "Low income, low emissions",
         label: "Lower-income, high-population countries like India sit in the bottom-left — low emissions per person, low income per person.",
-        dx: -90,
-        dy: 50
+        dx: 45,
+        dy: -60
       }
     ]
   },
@@ -33,8 +33,8 @@ App.scenes = [
         countryCode: "CHN",
         title: "Emerging economies take off",
         label: "China's income per person is rising fast — and its per-capita emissions are rising just as fast alongside it.",
-        dx: -80,
-        dy: -55
+        dx: 55,
+        dy: -70
       }
     ]
   },
@@ -48,7 +48,7 @@ App.scenes = [
         countryCode: "DEU",
         title: "A high-income economy plateaus",
         label: "Germany's income keeps climbing, but its per-capita emissions have started to flatten — growth without proportional emissions growth.",
-        dx: 60,
+        dx: -60,
         dy: -55
       },
       {
@@ -56,7 +56,7 @@ App.scenes = [
         title: "Still climbing together",
         label: "China's income and emissions are still rising in lockstep — the old coupling still holds here.",
         dx: -70,
-        dy: 40
+        dy: -60
       }
     ]
   },
@@ -71,15 +71,15 @@ App.scenes = [
         countryCode: "FRA",
         title: "Decoupled",
         label: "France: high income, but per-capita emissions well below its 1990 level — growth without proportional emissions.",
-        dx: 55,
-        dy: -70
+        dx: -55,
+        dy: -75
       },
       {
         countryCode: "IND",
         title: "Still coupled",
         label: "India: income per person is rising, and emissions per person are rising right along with it — the pattern hasn't broken here.",
-        dx: -95,
-        dy: 55
+        dx: -50,
+        dy: -70
       }
     ]
   },
