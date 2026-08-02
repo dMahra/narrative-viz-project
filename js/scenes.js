@@ -11,15 +11,15 @@ App.scenes = [
         countryCode: "USA",
         title: "High income, high emissions",
         label: "The United States and its high-income peers sit far to the right (wealthy) and towards the top of the chart (high CO₂ per person).",
-        dx: -45,
-        dy: 45
+        dx: -25,
+        dy: 25
       },
       {
         countryCode: "IND",
         title: "Low income, low emissions",
         label: "Lower-income, high population countries like India sit in the bottom-left with low emissions per person and low income per person.",
-        dx: 45,
-        dy: -60
+        dx: 30,
+        dy: -30
       }
     ]
   },
@@ -33,8 +33,8 @@ App.scenes = [
         countryCode: "CHN",
         title: "Emerging economies take off",
         label: "China's income per person and its per-capita emissions are rising alongside eachother.",
-        dx: 55,
-        dy: -70
+        dx: 35,
+        dy: -35
       }
     ]
   },
@@ -48,15 +48,15 @@ App.scenes = [
         countryCode: "DEU",
         title: "High-income economy plateau",
         label: "Germany's income keeps climbing, but its per-capita emissions have started to flatten illustrating growth without proportional emissions growth.",
-        dx: -60,
-        dy: -55
+        dx: -20,
+        dy: -20
       },
       {
         countryCode: "CHN",
         title: "Still climbing together",
         label: "China's income and emissions are still rising in routine",
-        dx: -70,
-        dy: -60
+        dx: -35,
+        dy: -35
       }
     ]
   },
@@ -71,15 +71,15 @@ App.scenes = [
         countryCode: "FRA",
         title: "Decoupled",
         label: "France: high income, but per-capita emissions well below its 1990 level — growth without proportional emissions.",
-        dx: -55,
-        dy: -75
+        dx: -20,
+        dy: -20
       },
       {
         countryCode: "IND",
         title: "Still coupled",
         label: "India: income per person is rising, and emissions per person are rising simultaneuosly (pattern still alive here).",
-        dx: -50,
-        dy: -70
+        dx: -35,
+        dy: -35
       }
     ]
   },

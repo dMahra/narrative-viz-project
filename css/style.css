@@ -1,21 +1,21 @@
 body {
-  margin: 20px;
+  margin: 14px;
   color: #000000;
   background: #ffffff;
 }
 
 h1 {
-  font-size: 24px;
-  margin-bottom: 4px;
+  font-size: 22px;
+  margin: 0 0 4px;
 }
 
 .subtitle {
   color: #444444;
-  margin-top: 0;
+  margin: 0 0 8px;
 }
 
 .narration-panel {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .scene-progress {
@@ -24,6 +24,10 @@ h1 {
 }
 
 .narration-panel h2 {
+  margin: 4px 0;
+}
+
+.narration-panel p {
   margin: 4px 0;
 }
 
@@ -54,6 +58,7 @@ h1 {
 .chart-container {
   position: relative;
   border: 1px solid #000000;
+  max-width: 820px;
 }
 
 .chart-svg {
@@ -76,7 +81,7 @@ h1 {
 }
 
 .year-label {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
   fill: #999999;
 }
@@ -91,7 +96,7 @@ h1 {
 }
 
 .legend {
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .legend-item {
@@ -125,7 +130,7 @@ h1 {
 }
 
 .scene-nav {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .nav-btn {
@@ -157,9 +162,13 @@ h1 {
 }
 
 .page-footer {
-  margin-top: 15px;
+  margin-top: 8px;
   font-size: 11px;
   color: #444444;
+}
+
+.page-footer p {
+  margin: 4px 0;
 }
 
 .narrative-annotation .annotation-note-bg {

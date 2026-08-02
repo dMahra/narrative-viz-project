@@ -17,9 +17,9 @@ App.REGION_COLORS = [
 App.CO2_DOMAIN_MAX = 22;
 
 App.createChart = function createChart(selector, allData) {
-  const margin = { top: 36, right: 32, bottom: 56, left: 64 };
-  const width = 760;
-  const height = 500;
+  const margin = { top: 20, right: 20, bottom: 36, left: 48 };
+  const width = 820;
+  const height = 340;
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -43,7 +43,7 @@ App.createChart = function createChart(selector, allData) {
   g.append("text")
     .attr("class", "axis-label")
     .attr("x", innerWidth / 2)
-    .attr("y", innerHeight + 44)
+    .attr("y", innerHeight + 28)
     .attr("text-anchor", "middle")
     .text("GDP per capita, PPP (constant 2021 intl $) — log scale");
 
@@ -51,14 +51,14 @@ App.createChart = function createChart(selector, allData) {
     .attr("class", "axis-label")
     .attr("transform", "rotate(-90)")
     .attr("x", -innerHeight / 2)
-    .attr("y", -48)
+    .attr("y", -34)
     .attr("text-anchor", "middle")
     .text("CO₂ emissions per capita (tonnes)");
 
   const yearLabel = g.append("text")
     .attr("class", "year-label")
     .attr("x", innerWidth)
-    .attr("y", -12)
+    .attr("y", 16)
     .attr("text-anchor", "end")
     .text("");
 
@@ -80,7 +80,7 @@ App.createChart = function createChart(selector, allData) {
 
   const r = d3.scaleSqrt()
     .domain([0, popMax])
-    .range([3, 42]);
+    .range([2, 26]);
 
   const regions = Array.from(new Set(allData.map(function (d) { return d.region; }))).sort();
   const color = d3.scaleOrdinal().domain(regions).range(App.REGION_COLORS);

@@ -15,7 +15,7 @@ App.renderAnnotations = function renderAnnotations(chart, sceneAnnotations) {
       note: {
         title: a.title,
         label: a.label,
-        wrap: 200
+        wrap: 180
       },
       x: chart.x(d.gdpPerCapita),
       y: chart.y(d.co2PerCapita),
