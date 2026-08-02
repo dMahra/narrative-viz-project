@@ -178,9 +178,10 @@ App.createLegend = function createLegend(selector, regions, color, onToggle) {
     .text(function (d) { return d; });
 
   const activeSet = new Set(regions);
+  let interactive = false;
 
   items.on("click", function (event, d) {
-    if (!onToggle) return;
+    if (!onToggle || !interactive) return;
     if (activeSet.has(d)) {
       activeSet.delete(d);
     } else {
@@ -193,6 +194,7 @@ App.createLegend = function createLegend(selector, regions, color, onToggle) {
   });
 
   function setInteractive(isInteractive) {
+    interactive = isInteractive;
     items.classed("legend-item-static", !isInteractive);
     if (!isInteractive) {
       activeSet.clear();

@@ -195,6 +195,7 @@ body {
 
 .legend-item-static {
   cursor: default;
+  pointer-events: none;
 }
 
 .legend-item:not(.legend-item-static):hover {
